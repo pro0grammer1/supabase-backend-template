@@ -9,7 +9,7 @@
 ## Prototype
 
 - [ ] Design API endpoints
-- [ ] Database structure
+- [X] Database structure
 - [X] List Features
 - [ ] Update Readme
 
@@ -19,3 +19,4 @@
 - [ ] Database connection
 - [ ] Frontend
 - [ ] UI Redesign continuation
+- [ ] Design for the users with low connectivity
