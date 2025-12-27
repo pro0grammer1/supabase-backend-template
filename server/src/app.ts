@@ -1,3 +1,6 @@
+// Check if all the environment variables are set
+import "./lib/env.js";
+
 // Type imports
 
 // Library imports

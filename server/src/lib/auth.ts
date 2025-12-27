@@ -1,7 +1,7 @@
 import { jwtVerify, importSPKI } from "jose";
 import { UnauthorizedError } from "../errors/httpErrors.js";
 
-const jwtKey = process.env.SUPABASE_JWT!;
+const jwtKey = process.env.SUPABASE_JWT!.replace(/\\n/g, "\n");
 
 const publicKey = await importSPKI(jwtKey, "ES256");
 
@@ -12,7 +12,10 @@ export default async function verifyJwt(token: string) {
     issuer: `${process.env.SUPABASE_URL}/auth/v1`,
   });
 
-  if (typeof payload.sub != "string") throw new UnauthorizedError();
+  if (typeof payload.sub != "string") {
+    throw new UnauthorizedError();
+  }
+
   return {
     id: payload.sub as string,
     email: payload.email as string | undefined,
