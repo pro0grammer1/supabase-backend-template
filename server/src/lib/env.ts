@@ -13,8 +13,6 @@ export const ENV = {
   PROD_URL:
     process.env.NODE_ENV === "production" ? requireEnv("PROD_URL") : undefined,
 
-  SUPABASE_JWT: requireEnv("SUPABASE_JWT"),
-
   SUPABASE_URL: requireEnv("SUPABASE_URL"),
 
   SUPABASE_SERVICE_KEY: requireEnv("SUPABASE_SERVICE_KEY"),

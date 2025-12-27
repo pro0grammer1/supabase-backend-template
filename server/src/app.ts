@@ -12,11 +12,12 @@ import cors from "cors";
 
 // Module imports
 import { indexRouter } from "./routes/index.js";
-import { usersRouter } from "./routes/users.js";
+import { meRouter } from "./routes/me.js";
 import { errorHandler } from "./middlewares/errorHandler.js";
 import { __dirname } from "./utils/paths.js";
 import { NotFoundError } from "./errors/httpErrors.js";
 import { authHandler } from "./middlewares/authHandler.js";
+import { tryCatch } from './utils/tryCatch.js'
 const app: Express = express();
 
 // External Middlewares
@@ -34,11 +35,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-app.use(authHandler);
+app.use(tryCatch(authHandler));
 
 // App routes
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
+app.use("/me", meRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

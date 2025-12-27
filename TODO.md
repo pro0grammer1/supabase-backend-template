@@ -9,9 +9,9 @@
 ## Prototype
 
 - [ ] Design API endpoints
-- - [ ] Create a mock `/me` path
+- - [X] Create a mock `/me` path
 - - - [X] Design the endpoint in openAPI
-- - - [ ] Test it in postman
+- - - [X] Test it in postman
 - [X] Database structure
 - [X] List Features
 - [ ] Update Readme
