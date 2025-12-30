@@ -1,6 +1,6 @@
 openapi: "3.0.3"
 info:
-  title: Hangman Backend API
+  title: Test APP
   version: "1.0.1"
 servers:
   - url: https://api.server.test/v1
