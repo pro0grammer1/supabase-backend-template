@@ -1,6 +1,4 @@
-#### This is the remake of hangman v1 game with robust error handling, testing and production grade application with Docker.
-
-${{\color{Goldenrod}\Huge{\textsf{  This project is in prototype phase \}}}}\$
+#### This is a template that can be used to design and configure a well structured fullstack app.
 
 There are 3 main folders in this app,
 
